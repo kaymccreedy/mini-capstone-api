@@ -9,7 +9,7 @@ products = []
 response.each do |product|
   product_info = []
   product_info << "#{product["name"]}"
-  product_info << "#{product["price"]}"
+  product_info << "$#{product["price"]}"
   product_info << "#{product["description"]}"
   products << product_info
 end
@@ -26,6 +26,7 @@ list = list.to_h{ |p| [p, list.index(p)] }
 puts "Welcome to the Product Store"
 puts "Below is a table of our products:"
 puts table.render(:ascii)
-choice = prompt.select("Choose a product", list).to_i + 1
-p choice
-p table[choice]
+choice = prompt.select("Choose a product", list).to_i
+item = products[choice]
+table = TTY::Table[["Item", "Price", "Description"], item]
+puts table.render(:ascii)
