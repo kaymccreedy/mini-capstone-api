@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
-  
-  get "/products", controller: "products", action: "products"
 
-  get "/product_table", controller: "products", action: "product_table"
+  get "/products" => "products#index"
 
-  get "/one_product/:id", controller: "products", action: "one_product"
+  get "/products/:id" => "products#show"
+
+  post "/products" => "products#create"
 
 end
+    
