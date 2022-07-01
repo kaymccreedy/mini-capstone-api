@@ -11,7 +11,11 @@ class ProductsController < ApplicationController
   end
 
   def create
-    product = Product.new(name: "small hand sanitizer", price: 2, image_url: "https://m.media-amazon.com/images/I/61vXGLpOiPL._SL1500_.jpg", description: "small bottle of hand sanitizer")
+    product = Product.new(
+      name: "small hand sanitizer",
+      price: 2,
+      image_url: "https://m.media-amazon.com/images/I/61vXGLpOiPL._SL1500_.jpg",
+      description: "small bottle of hand sanitizer")
     product.save
     render json: product.as_json
   end
