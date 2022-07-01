@@ -9,7 +9,15 @@ POST http://localhost:3000/products.json
 Content-Type: application/json
 
 {
-  "name": "test name",
-  "price": "test price",
-  "description": "test description"
+  "name": "New Product",
+  "price": "50",
+  "description": "It's a product!"
+}
+
+### Products Update
+PATCH http://localhost:3000/products/8.json
+Content-Type: application/json
+
+{
+  "name": "renamed product"
 }
