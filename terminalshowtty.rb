@@ -4,10 +4,22 @@ require "tty-table"
 
 prompt = TTY::Prompt.new
 response = HTTP.get("http://localhost:3000/products").parse
+
 items = []
 response.each do |product|
   items << "#{product["name"]}"
 end
+
+products = []
+response.each do |product|
+  product_info = []
+  product_info << "#{product["name"]}"
+  product_info << "$#{product["price"]}"
+  product_info << "#{product["description"]}"
+  products << product_info
+end
+
+table = TTY::Table.new(["Item", "Price", "Description"], products)
 
 puts "Welcome to the Product Store"
 
@@ -17,6 +29,7 @@ while true
 
   if choice == "Product Index"
     x = 1
+    response = HTTP.get("http://localhost:3000/products").parse
     response.each do |product|
       info = "#{x}. Item: #{product["name"]} | Price: $#{product["price"]} | Description: #{product["price"]}"
       puts
@@ -28,7 +41,7 @@ while true
 
   elsif choice == "Single Product"
     item = prompt.select("Choose a Product", items)
-    id = items.index(item) + 7
+    id = items.index(item) + 79
     response = HTTP.get("http://localhost:3000/products/#{id}").parse
     puts "Item: #{response["name"]}"
     puts "Price: #{response["price"]}"
@@ -36,17 +49,8 @@ while true
     puts
     puts
 
-  elsif choice == "Product Table"
-    products = []
-    response.each do |product|
-      product_info = []
-      product_info << "#{product["name"]}"
-      product_info << "$#{product["price"]}"
-      product_info << "#{product["description"]}"
-      products << product_info
-    end
-
-    table = TTY::Table.new(["Item", "Price", "Description"], products)
+  elsif choice == "Product Table" 
+    response = HTTP.get("http://localhost:3000/products").parse   
     list = []
     table.each do |row|
       list << row[0]
