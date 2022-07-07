@@ -2,7 +2,7 @@
 GET http://localhost:3000/products.json
 
 ### Products Show
-GET http://localhost:3000/products/8.json
+GET http://localhost:3000/products/103.json
 
 ### Products Create
 POST http://localhost:3000/products.json
@@ -16,12 +16,12 @@ Content-Type: application/json
 }
 
 ### Products Update
-PATCH http://localhost:3000/products/8.json
+PATCH http://localhost:3000/products/103.json
 Content-Type: application/json
 
 {
-  "name": "renamed product"
+  "name": "masky boy"
 }
 
 ### Products Destroy
-DELETE http://localhost:3000/products/80.json
+DELETE http://localhost:3000/products/103.json
