@@ -1,8 +1,10 @@
+# Products
+
 ### Products Index
 GET http://localhost:3000/products.json
 
 ### Products Show
-GET http://localhost:3000/products/103.json
+GET http://localhost:3000/products/1.json
 
 ### Products Create
 POST http://localhost:3000/products.json
@@ -25,4 +27,35 @@ Content-Type: application/json
 }
 
 ### Products Destroy
-DELETE http://localhost:3000/products/103.json
+DELETE http://localhost:3000/products/1.json
+
+
+
+# Suppliers
+
+### Suppliers Index
+GET http://localhost:3000/suppliers.json
+
+### Suppliers Show
+GET http://localhost:3000/suppliers/1.json
+
+### Suppliers Create
+POST http://localhost:3000/suppliers.json
+Content-Type: application/json
+
+{
+  "name": "New Supplier",
+  "email": "new@example.com",
+  "phone_number": "555-555-5555"
+}
+
+### Suppliers Update        
+PATCH http://localhost:3000/suppliers/1.json
+Content-Type: application/json
+
+{
+  "phone_number": "000-000-0000"
+}
+
+### Suppliers Destroy
+DELETE http://localhost:3000/suppliers/4.json

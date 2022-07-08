@@ -20,3 +20,10 @@ Product.create!([
   {name: "New Product", price: "50.0", image_url: "https://www.marketing91.com/wp-content/uploads/2018/08/Product-Portfolio-1.jpg", description: "It's a product!", inventory: nil},
   {name: "New Product", price: "50.0", image_url: "https://www.marketing91.com/wp-content/uploads/2018/08/Product-Portfolio-1.jpg", description: "It's a product!", inventory: nil}
 ])
+
+Supplier.create([
+  {name: "Supplies Co", email: "supplies@example.com", phone_number: "11
+  1-222-3333"},
+  {name: "Products Inc", email: "products@example.com", phone_number: "222-333-4444"},
+  {name: "Items Ltd", email: "items@example.com", phone_number: "333-444-5555"}
+])
