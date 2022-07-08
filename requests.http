@@ -9,18 +9,19 @@ POST http://localhost:3000/products.json
 Content-Type: application/json
 
 {
-  "name": "New Product",
+  "name": "New Product 3",
   "price": "50",
   "image_url": "https://www.marketing91.com/wp-content/uploads/2018/08/Product-Portfolio-1.jpg",
   "description": "It's a product!"
 }
 
 ### Products Update
-PATCH http://localhost:3000/products/103.json
+PATCH http://localhost:3000/products/1.json
 Content-Type: application/json
 
 {
-  "name": "masky boy"
+  "name": "masky boy",
+  "price": "0"
 }
 
 ### Products Destroy
