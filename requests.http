@@ -2,7 +2,7 @@
 
 ### Products Index
 GET http://localhost:3000/products.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTc2NDk5NzF9.6lGbui79d2unhBoYGYcd68Juz4fXS2V5fpudDhI33Gg
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTc3MzM2ODd9.a6HhjZnZPyf-gpO71VrG4ga4V1RJPdGKURPJSRgHIcs
 
 ### Products Show
 GET http://localhost:3000/products/1.json
@@ -85,6 +85,28 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "kay@example.com",
+  "email": "asher@example.com",
   "password": "password"
+}
+
+
+
+# Orders
+
+### Orders Index
+GET http://localhost:3000/orders.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NTc3Mzg0NjZ9.Llvvbdv0NqZAJOE19vLxI_bcFp3yDII0z7CLy_sxC2I
+
+### Orders Show
+GET http://localhost:3000/orders/27.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NTc3MzgzMzN9.HGFUwlq8vOe0R4-p_EjsIMi2kBYTK33RJmDJSGO3OZI
+
+### Orders Create
+POST http://localhost:3000/orders.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NTc3MzgzMzN9.HGFUwlq8vOe0R4-p_EjsIMi2kBYTK33RJmDJSGO3OZI
+Content-Type: application/json
+
+{
+  "product_id": "1",
+  "quantity": "5000"
 }
