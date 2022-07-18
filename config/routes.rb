@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  # resources :CartedProduct, controller: "carted_products"
 
   get "/products" => "products#index"
 
@@ -31,6 +32,16 @@ Rails.application.routes.draw do
   get "/orders/:id" => "orders#show"
 
   post "/orders" => "orders#create"
+
+  get "/carted_products" => "carted_products#index"
+
+  get "/carted_products/:id" => "carted_products#show"
+
+  post "/carted_products" => "carted_products#create"
+
+  patch "/carted_products/:id" => "carted_products#update"
+
+  delete "/carted_products/:id" => "carted_products#destroy"
 
 end
     

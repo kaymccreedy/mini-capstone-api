@@ -94,7 +94,7 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "asher@example.com",
+  "email": "kay@example.com",
   "password": "password"
 }
 
@@ -120,18 +120,38 @@ Content-Type: application/json
   "quantity": "5000"
 }
 
-# Kay
 
-# eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTc3NDA1NzV9.R9dCve3qplf6aWMNBQMUc4MugIL3_-XqaVLr1o8lbF4
+# Carted Products
 
-
-
-# Romyn
-
-# eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NTc3NDExMjZ9.YpX9vHjsVSSFN3WQor0W4GKsxh3c2sTmw9fxFbAfHYI
+### Carted Product Index
+GET http://localhost:3000/carted_products.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTgyNTQzNjR9.NzrFjxcEReIAxwggumkfQPSzJGSN2p02vTOM4STT_RE
 
 
+### Carted Product Show
+GET http://localhost:3000/carted_products/2.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTgyNTQzNjR9.NzrFjxcEReIAxwggumkfQPSzJGSN2p02vTOM4STT_RE
 
-# Asher
 
-# eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NTc3NDExNzJ9.zznJ8agWenzM7-ReWztM-WS4aYE9p3YE7q6jvjtk6nI
+### Carted Product Create
+POST http://localhost:3000/carted_products.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTgyNTQzNjR9.NzrFjxcEReIAxwggumkfQPSzJGSN2p02vTOM4STT_RE
+Content-Type: application/json
+
+{
+  "product_id": 4,
+  "quantity": 15
+}
+
+### Carted Product Update
+PATCH http://localhost:3000/carted_products/2.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTgyNTQzNjR9.NzrFjxcEReIAxwggumkfQPSzJGSN2p02vTOM4STT_RE
+Content-Type: application/json
+
+{
+  "quantity": 15
+}
+
+### Carted Product Destroy
+DELETE http://localhost:3000/carted_products/2.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTgyNTQzNjR9.NzrFjxcEReIAxwggumkfQPSzJGSN2p02vTOM4STT_RE
