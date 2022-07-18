@@ -1,4 +1,4 @@
-@jwt_kay = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTc3NDA1NzV9.R9dCve3qplf6aWMNBQMUc4MugIL3_-XqaVLr1o8lbF4
+@jwt_kay = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTgyNTQzNjR9.NzrFjxcEReIAxwggumkfQPSzJGSN2p02vTOM4STT_RE
 
 # Products
 
@@ -10,17 +10,20 @@ GET http://localhost:3000/products/1.json
 
 ### Products Create
 POST http://localhost:3000/products.json
+Authorization: Bearer {{jwt_kay}}
 Content-Type: application/json
 
 {
   "name": "New Product 3",
   "price": "50",
   "image_url": "https://www.marketing91.com/wp-content/uploads/2018/08/Product-Portfolio-1.jpg",
-  "description": "It's a product!"
+  "description": "It's a product!",
+  "supplier_id": 1
 }
 
 ### Products Update
 PATCH http://localhost:3000/products/1.json
+Authorization: Bearer {{jwt_kay}}
 Content-Type: application/json
 
 {
@@ -104,38 +107,31 @@ Content-Type: application/json
 
 ### Orders Index
 GET http://localhost:3000/orders.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NTc3NDExMjZ9.YpX9vHjsVSSFN3WQor0W4GKsxh3c2sTmw9fxFbAfHYI
+Authorization: Bearer {{jwt_kay}}
 
 ### Orders Show
 GET http://localhost:3000/orders/41.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NTc3NDExMjZ9.YpX9vHjsVSSFN3WQor0W4GKsxh3c2sTmw9fxFbAfHYI
+Authorization: Bearer {{jwt_kay}}
 
 ### Orders Create
 POST http://localhost:3000/orders.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NTc3NDExMjZ9.YpX9vHjsVSSFN3WQor0W4GKsxh3c2sTmw9fxFbAfHYI
+Authorization: Bearer {{jwt_kay}}
 Content-Type: application/json
-
-{
-  "product_id": "1",
-  "quantity": "5000"
-}
 
 
 # Carted Products
 
 ### Carted Product Index
 GET http://localhost:3000/carted_products.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTgyNTQzNjR9.NzrFjxcEReIAxwggumkfQPSzJGSN2p02vTOM4STT_RE
-
+Authorization: Bearer {{jwt_kay}}
 
 ### Carted Product Show
 GET http://localhost:3000/carted_products/2.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTgyNTQzNjR9.NzrFjxcEReIAxwggumkfQPSzJGSN2p02vTOM4STT_RE
-
+Authorization: Bearer {{jwt_kay}}
 
 ### Carted Product Create
 POST http://localhost:3000/carted_products.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTgyNTQzNjR9.NzrFjxcEReIAxwggumkfQPSzJGSN2p02vTOM4STT_RE
+Authorization: Bearer {{jwt_kay}}
 Content-Type: application/json
 
 {
@@ -145,7 +141,7 @@ Content-Type: application/json
 
 ### Carted Product Update
 PATCH http://localhost:3000/carted_products/2.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTgyNTQzNjR9.NzrFjxcEReIAxwggumkfQPSzJGSN2p02vTOM4STT_RE
+Authorization: Bearer {{jwt_kay}}
 Content-Type: application/json
 
 {
@@ -154,4 +150,4 @@ Content-Type: application/json
 
 ### Carted Product Destroy
 DELETE http://localhost:3000/carted_products/2.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTgyNTQzNjR9.NzrFjxcEReIAxwggumkfQPSzJGSN2p02vTOM4STT_RE
+Authorization: Bearer {{jwt_kay}}
