@@ -16,7 +16,6 @@ Content-Type: application/json
 {
   "name": "New Product 3",
   "price": "50",
-  "image_url": "https://www.marketing91.com/wp-content/uploads/2018/08/Product-Portfolio-1.jpg",
   "description": "It's a product!",
   "supplier_id": 1
 }
