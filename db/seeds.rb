@@ -1,9 +1,22 @@
 Product.create(name: "Red Flower Print", price: 20, description: "'Red Flower' print", size: "12 x 18", supplier_id: 1)
 Product.create(name: "Grand Canyon Sunset Print", price: 20, description: "'Grand Canyon Sunset' print", size: "12 x 18", supplier_id: 1)
 Product.create(name: "French Creek Reflection Print", price: 20, description: "'French Creek Reflection' print", size: "10 x 16", supplier_id: 1)
-Product.create(name: "Murmuration Print", price: 20, description: "'Murmuration' print", size: "10 x 14", supplier_id: 1)
+Product.create(name: "Murmuration Print", price: 20, description: "'Murmuration' print", size: "10 x 15", supplier_id: 1)
 Product.create(name: "Olive Print", price: 20, description: "'Olive' print", size: "10 x 14", supplier_id: 2)
 
 Supplier.create(name: "Kay McCreedy", email: "kay@example.com", phone_number: "000-000-0000")
 Supplier.create(name: "Romyn Flora", email: "romyn@example.com", phone_number: "111-111-1111")
 
+Image.create(url: "https://i.ibb.co/bQ9D2fZ/Red-Flower-1.jpg", product_id: 1)
+Image.create(url: "https://i.ibb.co/gdzKmr1/Red-Flower-2.jpg", product_id: 1)
+Image.create(url: "https://i.ibb.co/D15y22n/Grand-Canyon-1.jpg", product_id: 2)
+Image.create(url: "https://i.ibb.co/cgTzbJB/Grand-Canyon-2.jpg", product_id: 2)
+Image.create(url: "https://i.ibb.co/N2hgWvK/French-Creek-Reflection-1.jpg", product_id: 3)
+Image.create(url: "https://i.ibb.co/GPLq9n7/French-Creek-Reflection-2.jpg", product_id: 3)
+Image.create(url: "https://i.ibb.co/Ry0BctV/Murmuration-1.jpg", product_id: 4)
+Image.create(url: "https://i.ibb.co/BCMFHZY/Murmuration-2.jpg", product_id: 4)
+Image.create(url: "https://i.ibb.co/KqqLMxT/Olive.jpg", product_id: 5)
+
+User.create(name: "Kay", email: "kay@example.com", password: "password", password_confirmation: "password", admin: true)
+User.create(name: "Asher", email: "asher@example.com", password: "password", password_confirmation: "password", admin: false)
+User.create(name: "Romyn", email: "romyn@example.com", password: "password", password_confirmation: "password", admin: false)
