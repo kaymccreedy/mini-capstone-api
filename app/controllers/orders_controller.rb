@@ -4,16 +4,16 @@ class OrdersController < ApplicationController
   def index
     orders = current_user.orders
     if orders.length > 0
-      render json: orders.as_json
+      render template: "orders/index"
     else
       render json: { error: "You have no orders!" }
     end
   end
 
   def show
-    order = Order.find_by(id: params["id"])
-    if order.user == current_user
-      render json: order.as_json
+    @order = Order.find_by(id: params["id"])
+    if @order.user == current_user
+      render template: "orders/show"
     else
       render json: { error: "You can only view your own orders" }, status: :unauthorized
     end
