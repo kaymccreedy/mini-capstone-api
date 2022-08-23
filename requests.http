@@ -1,4 +1,4 @@
-@jwt_kay = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTk1NTE4NTV9.HYu74Yn15Phuq1-fNYPGrPu6fYayO67SpaQQmfayxMQ
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTk1NTE4NTV9.HYu74Yn15Phuq1-fNYPGrPu6fYayO67SpaQQmfayxMQ
 
 # Sessions
 
@@ -23,7 +23,7 @@ GET http://localhost:3000/products/1.json
 
 ### Products Create
 POST http://localhost:3000/products.json
-Authorization: Bearer {{jwt_kay}}
+Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
@@ -35,7 +35,7 @@ Content-Type: application/json
 
 ### Products Update
 PATCH http://localhost:3000/products/1.json
-Authorization: Bearer {{jwt_kay}}
+Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
@@ -45,7 +45,7 @@ Content-Type: application/json
 
 ### Products Destroy
 DELETE http://localhost:3000/products/6.json
-Authorization: Bearer {{jwt_kay}}
+Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 
@@ -108,15 +108,15 @@ Content-Type: application/json
 
 ### Orders Index
 GET http://localhost:3000/orders.json
-Authorization: Bearer {{jwt_kay}}
+Authorization: Bearer {{jwt}}
 
 ### Orders Show
 GET http://localhost:3000/orders/41.json
-Authorization: Bearer {{jwt_kay}}
+Authorization: Bearer {{jwt}}
 
 ### Orders Create
 POST http://localhost:3000/orders.json
-Authorization: Bearer {{jwt_kay}}
+Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 
@@ -124,15 +124,15 @@ Content-Type: application/json
 
 ### Carted Product Index
 GET http://localhost:3000/carted_products.json
-Authorization: Bearer {{jwt_kay}}
+Authorization: Bearer {{jwt}}
 
 ### Carted Product Show
 GET http://localhost:3000/carted_products/2.json
-Authorization: Bearer {{jwt_kay}}
+Authorization: Bearer {{jwt}}
 
 ### Carted Product Create
 POST http://localhost:3000/carted_products.json
-Authorization: Bearer {{jwt_kay}}
+Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
@@ -142,7 +142,7 @@ Content-Type: application/json
 
 ### Carted Product Update
 PATCH http://localhost:3000/carted_products/2.json
-Authorization: Bearer {{jwt_kay}}
+Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
@@ -151,4 +151,4 @@ Content-Type: application/json
 
 ### Carted Product Destroy
 DELETE http://localhost:3000/carted_products/2.json
-Authorization: Bearer {{jwt_kay}}
+Authorization: Bearer {{jwt}}
